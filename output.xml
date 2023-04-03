@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.5 on win32)" generated="20230329 10:45:53.768" rpa="false">
+<suite id="s1" name="SampleRobo" source="C:\Users\kumaran\eclipse-workspace\robotproject\SampleRobo">
+<suite id="s1-s1" name="Vendor" source="C:\Users\kumaran\eclipse-workspace\robotproject\SampleRobo\Vendor.robot">
+<test id="s1-s1-t1" name="Launch the Url and check dashboard is opening">
+<kw name="go to dashboardPage" library="general">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<arguments>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20230329 10:45:54.148" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230329 10:45:54.148" endtime="20230329 10:45:55.545"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${baseUrl}</arg>
+</arguments>
+<msg timestamp="20230329 10:45:55.547" level="INFO">Opening url 'https://www.jrecommerce.com/demo.php#demo'</msg>
+<status status="PASS" starttime="20230329 10:45:55.546" endtime="20230329 10:45:59.966"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230329 10:45:59.967" endtime="20230329 10:46:00.148"></status>
+</kw>
+<status status="PASS" starttime="20230329 10:45:54.147" endtime="20230329 10:46:00.149"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>${pagetxt}</arg>
+</arguments>
+<msg timestamp="20230329 10:46:00.178" level="INFO">Current page contains text 'eCommerce Demo'.</msg>
+<status status="PASS" starttime="20230329 10:46:00.150" endtime="20230329 10:46:00.178"></status>
+</kw>
+<status status="PASS" starttime="20230329 10:45:54.146" endtime="20230329 10:46:00.178" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="Click VendorLogin and check page is opening">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${vendorLoginclk}</arg>
+</arguments>
+<msg timestamp="20230329 10:46:00.180" level="INFO">Clicking link '//a[normalize-space()='Vendor Login']'.</msg>
+<status status="PASS" starttime="20230329 10:46:00.180" endtime="20230329 10:46:00.331"></status>
+</kw>
+<kw name="Select Window" library="SeleniumLibrary">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>NEW</arg>
+</arguments>
+<status status="PASS" starttime="20230329 10:46:00.332" endtime="20230329 10:46:00.352"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${vendorpageTxt}</arg>
+</arguments>
+<msg timestamp="20230329 10:46:02.361" level="INFO">Current page contains element '//h2[normalize-space()='Returning Vendor']'.</msg>
+<status status="PASS" starttime="20230329 10:46:00.353" endtime="20230329 10:46:02.362"></status>
+</kw>
+<status status="PASS" starttime="20230329 10:46:00.179" endtime="20230329 10:46:02.362" critical="yes"></status>
+</test>
+<test id="s1-s1-t3" name="Check vendor login Credentials">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>input-email</arg>
+<arg>${userName}</arg>
+</arguments>
+<msg timestamp="20230329 10:46:02.365" level="INFO">Typing text 'demovendor@gmail.com' into text field 'input-email'.</msg>
+<status status="PASS" starttime="20230329 10:46:02.364" endtime="20230329 10:46:02.530"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>input-password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20230329 10:46:02.531" level="INFO">Typing password into text field 'input-password'.</msg>
+<status status="PASS" starttime="20230329 10:46:02.530" endtime="20230329 10:46:02.664"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${loginBtn}</arg>
+</arguments>
+<msg timestamp="20230329 10:46:02.665" level="INFO">Clicking element '//input[@value='Login']'.</msg>
+<status status="PASS" starttime="20230329 10:46:02.664" endtime="20230329 10:46:03.809"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230329 10:46:03.809" endtime="20230329 10:46:05.962"></status>
+</kw>
+<status status="PASS" starttime="20230329 10:46:02.363" endtime="20230329 10:46:05.962" critical="yes"></status>
+</test>
+<doc>This file has to test the application</doc>
+<status status="PASS" starttime="20230329 10:45:53.835" endtime="20230329 10:46:05.964"></status>
+</suite>
+<status status="PASS" starttime="20230329 10:45:53.809" endtime="20230329 10:46:05.969"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" id="s1" name="SampleRobo">SampleRobo</stat>
+<stat pass="3" fail="0" id="s1-s1" name="Vendor">SampleRobo.Vendor</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
